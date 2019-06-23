@@ -1,6 +1,6 @@
 {
   "name": "lecs",
-  "version": "0.0.1-pre.5",
+  "version": "0.0.1-pre.6",
   "description": "A Web ECS Declarative Lexicon",
   "main": "./dist-umd/lecs.js",
   "types": "./types/index.d.ts",
@@ -14,9 +14,9 @@
     "build:var": "cross-env NODE_WEBPACK_LIBRARY_PATH=dist-var NODE_WEBPACK_LIBRARY_TARGET=var webpack",
     "build:types": "npx dts-bundle-generator --umd-module-name LECS -o types/index.d.ts dist-esmodule/index.d.ts",
     "build:docs": "rimraf -rf docs && typedoc --out docs --name LECS --theme default --ignoreCompilerErrors --experimentalDecorators --emitDecoratorMetadata --target ES6 --moduleResolution node --preserveConstEnums --stripInternal --suppressExcessPropertyErrors --suppressImplicitAnyIndexErrors --module commonjs src/ && echo> docs/.nojekyll",
-    "build": "npm run lint && npm run clean && npm run build:commonjs && npm run build:esmodule && npm run build:umd && npm run build:var && npm run copy:examples && npm run build:types && npm run build:docs",
-    "prepublishOnly": "npm run build && npm run netlify",
-    "examples": "npx serve -c 0 -o",
+    "build": "npm run lint && npm run clean && npm run build:commonjs && npm run build:esmodule && npm run build:umd && npm run build:var && npm run copy:examples && npm run build:types",
+    "prepublishOnly": "npm run build && npm run build:docs && npm run netlify",
+    "start": "npx serve -c 0 -o",
     "netlify": "netlify deploy --dir=./examples --prod"
   },
   "repository": {
@@ -49,7 +49,6 @@
   },
   "dependencies": {
     "@types/three": "0.93.30",
-    "ecsy": "^0.1.0",
-    "three": "^0.105.1"
+    "ecsy": "^0.1.0"
   }
 }
