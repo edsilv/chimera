@@ -1,5 +1,5 @@
 {
-  "name": "@edsilv/lecs",
+  "name": "lecs",
   "version": "0.0.1-pre.1",
   "description": "An experiment to see if it's possible to update A-Frame to use webpack, esmodules, types (via TypeScript), and custom elements v1.",
   "main": "./dist-umd/lecs.js",
