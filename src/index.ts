@@ -4,4 +4,4 @@ import "@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js";
 
 export * from "./utils/";
 export * from "./core/LXEntity";
-export * from "./core/scene/LXScene";
+export * from "./core/world/LXWorld";

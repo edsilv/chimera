@@ -2,7 +2,7 @@ import { World } from "ecsy";
 import { LXEntity } from "../LXEntity";
 import { bind } from "../../utils/bind";
 
-export class LXScene extends LXEntity {
+export class LXWorld extends LXEntity {
   private _world: World;
   private _prevTime: number;
 
@@ -12,19 +12,20 @@ export class LXScene extends LXEntity {
     self._prevTime = performance.now();
     self.update = bind(self.update, self);
     requestAnimationFrame(self.update);
-    console.log("LXScene constructed");
+    console.log("LXWorld constructed");
     return self;
   }
 
   connectedCallback() {
-    console.log("LXScene connected");
+    console.log("LXWorld connected");
   }
 
   update(time: number) {
     const dt: number = time - this._prevTime;
     this._world.execute(dt, time);
+    console.log("update");
     requestAnimationFrame(this.update);
   }
 }
 
-window.customElements.define("lx-scene", LXScene);
+window.customElements.define("lx-world", LXWorld);
