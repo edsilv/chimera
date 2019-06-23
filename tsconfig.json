@@ -5,6 +5,8 @@
               "name": "typescript-tslint-plugin"
             }
         ],
+        "incremental": true,
+        "tsBuildInfoFile": "./buildcache/lecs",
         "allowSyntheticDefaultImports": true,
         "declaration": true,
         "forceConsistentCasingInFileNames": true,
