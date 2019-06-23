@@ -1,6 +1,6 @@
 # LECS
 
-## A Web ECS Declarative Lexicon
+### A Web ECS Declarative Lexicon
 
 !!Under development!!
 
