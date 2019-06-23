@@ -1,6 +1,6 @@
 {
   "name": "lecs",
-  "version": "0.0.1-pre.1",
+  "version": "0.0.1-pre.2",
   "description": "A Web ECS Declarative Lexicon",
   "main": "./dist-umd/lecs.js",
   "types": "./types/index.d.ts",
