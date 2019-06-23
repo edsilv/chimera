@@ -1,8 +1,8 @@
 {
-  "name": "@edsilv/chimera",
+  "name": "@edsilv/lecs",
   "version": "0.0.1-pre.1",
   "description": "An experiment to see if it's possible to update A-Frame to use webpack, esmodules, types (via TypeScript), and custom elements v1.",
-  "main": "./dist-umd/chimera.js",
+  "main": "./dist-umd/lecs.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "lint": "prettier --write \"./src/**/*.{js,jsx,json,css,ts,tsx}\" \"!./src/assets/* \"",
@@ -11,8 +11,8 @@
     "build:esmodule": "tsc -m es6 --outDir dist-esmodule",
     "build:umd": "webpack",
     "build:var": "cross-env NODE_WEBPACK_LIBRARY_PATH=dist-var NODE_WEBPACK_LIBRARY_TARGET=var webpack",
-    "build:types": "npx dts-bundle-generator --umd-module-name CHIMERA -o types/index.d.ts dist-esmodule/index.d.ts",
-    "build:docs": "rimraf -rf docs && typedoc --out docs --name CHIMERA --theme default --ignoreCompilerErrors --experimentalDecorators --emitDecoratorMetadata --target ES6 --moduleResolution node --preserveConstEnums --stripInternal --suppressExcessPropertyErrors --suppressImplicitAnyIndexErrors --module commonjs src/ && echo> docs/.nojekyll",
+    "build:types": "npx dts-bundle-generator --umd-module-name LECS -o types/index.d.ts dist-esmodule/index.d.ts",
+    "build:docs": "rimraf -rf docs && typedoc --out docs --name LECS --theme default --ignoreCompilerErrors --experimentalDecorators --emitDecoratorMetadata --target ES6 --moduleResolution node --preserveConstEnums --stripInternal --suppressExcessPropertyErrors --suppressImplicitAnyIndexErrors --module commonjs src/ && echo> docs/.nojekyll",
     "build": "npm run lint && npm run clean && npm run build:commonjs && npm run build:esmodule && npm run build:umd && npm run build:var && npm run build:types && npm run build:docs",
     "prepublishOnly": "npm run build",
     "examples": "npx serve -c 0 -o",
@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edsilv/chimera.git"
+    "url": "git+https://github.com/edsilv/lecs.git"
   },
   "keywords": [],
   "author": "@edsilv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/edsilv/chimera/issues"
+    "url": "https://github.com/edsilv/lecs/issues"
   },
-  "homepage": "https://github.com/edsilv/chimera#readme",
+  "homepage": "https://github.com/edsilv/lecs#readme",
   "devDependencies": {
     "@types/node": "10.7.1",
     "@webcomponents/custom-elements": "^1.2.4",

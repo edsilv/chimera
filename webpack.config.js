@@ -8,15 +8,15 @@ const config = {
     // These are the entry point of our library. We tell webpack to use the name we assign later, when creating the bundle.
     // We also use the name to filter the second entry point for applying code minification via UglifyJS
     entry: {
-        'CHIMERA': ['./src/index.ts']
+        'LECS': ['./src/index.ts']
     },
     // The output defines how and where we want the bundles. The special value `[name]` in `filename` tells Webpack to use the name we defined above.
-    // We target a UMD and name it CHIMERA. When including the bundle in the browser it will be accessible at `window.CHIMERA`
+    // We target a UMD and name it LECS. When including the bundle in the browser it will be accessible at `window.LECS`
     output: {
         path: resolvePath('dist-umd'),
-        filename: 'chimera.js',
+        filename: 'lecs.js',
         libraryTarget: 'umd',
-        library: 'CHIMERA',
+        library: 'LECS',
         umdNamedDefine: true
     },
     // Add resolve for `tsx` and `ts` files, otherwise Webpack would
